@@ -6,7 +6,7 @@ $ws = new swoole_websocket_server("0.0.0.0", 9501);
 //open $ws $request
 $ws->on('open', function($ws, $request){
   var_dump($request);
-  $ws->push($request->fd, 'welcome \n');
+  $ws->push($request->fd, "welcome \n");
 });
 
 //message
@@ -18,7 +18,7 @@ $ws->on('message', function ($ws, $request){
 //close
 $ws->on('close', function ($ws, $request)
 {
-  echo 'close\n';
+  echo "close\n";
 });
 
 $ws->start();

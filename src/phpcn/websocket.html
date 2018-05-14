@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="utf-8">
+<title>WebSocket</title>
+</head>
+<body>
+  trt
+<script>
+var wsServer = "ws://192.168.30.133:9501";
+var webSocket = new WebSocket(wsServer);
+webSocket.onopen = function(evt)
+{
+  console.log('success connect');
+}
+
+webSocket.onclose = function (evt)
+{
+  console.log('close');
+}
+
+webSocket.onmessage = function (evt)
+{
+  console.log(evt.data);
+}
+webSocket.onerror = function (evt, e)
+{
+  console.log('error');
+}
+</script>
+</body>
+</html>
