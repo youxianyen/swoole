@@ -1,13 +1,19 @@
 <?php
 /*
+<?php
+/*
   http://www.php.cn/code/20622.html
   2-7 tcip
 */
 //create tcp
-header("Content-type: text/html; charset=utf-8"); 
+header("Content-type: text/html; charset=utf-8");
 $serv = new swoole_server("0.0.0.0", 9501);
 
-//set ansync_task
+/*
+set ansync_task
+2-8
+*/
+
 $serv->set(array('task_worker_num' => 4));
 
 //
@@ -32,4 +38,10 @@ $serv->on('finish', function ($serv, $task_id, $data){
 });
 
 $serv->start();
+ ?>
+
+
+*/
+$bridge = new swoole_client (SWOOLE_SOCK_TCP);
+
  ?>

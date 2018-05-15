@@ -4,7 +4,7 @@
   2-7 tcip
 */
 //create tcp
-header("Content-type: text/html; charset=utf-8"); 
+header("Content-type: text/html; charset=utf-8");
 $serv = new swoole_server("0.0.0.0", 9501);
 
 //set ansync_task
