@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title id="myTitle">IMS</title>
+<link rel="stylesheet" href="css/index.css"></link>
+</head>
+<body>
+<!--send message-->
+<div id="send_msg" class="main box-shadow" style="display: none;">
+  <div id="msg"></div>
+  <div class="show_send">
+    <input type="text" id="text">
+    <input type="submit" class="send_button" type="submit" value="send message" onclick="send();">
+  </div>
+  <!--set nickname-->
+  <div id="setName" class="box-shadow" style="display: block;">
+    <input type="text" id="myname">
+    <input type="submit" class="setUsername" value="set nickname" onclick="send_name();">
+  </div>
+</div>
+</body>
+<script src="js/jquery-1.9.0.min.js"></script>
+<script src="js/websocket.js"></script>
+<script src="js/index.js"></script>
+<script></script>
+</html>
